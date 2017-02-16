@@ -81,10 +81,11 @@ public class EmojiRenderableChecker {
 
     private static EmojiRenderableChecker instance;
 
-    public static synchronized void getInstance() {
+    public static synchronized EmojiSupportChecker getInstance() {
         if (instance == null) {
-            instance = new EmojiRenderableChecker();
+            instance = new EmojiSupportChecker();
         }
+        return instance;
     }
 
     private EmojiRenderableChecker() {
