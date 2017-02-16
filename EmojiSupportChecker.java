@@ -53,7 +53,7 @@ import java.util.Arrays;
  */
 // TODO(hsumita): Fix coding style.
 // TODO(hsumita): Use {@link android.graphics.Paint#hasGlyph(String)} on API 23 and above.
-public class EmojiRenderableChecker {
+public class EmojiSupportChecker {
 
     private static final int TEST_FONT_SIZE = 10;
     private static final int FOREGROUND_COLOR = Color.WHITE;
@@ -79,7 +79,7 @@ public class EmojiRenderableChecker {
      */
     private int[] mFallbackGlyphPixels = null;
 
-    private static EmojiRenderableChecker instance;
+    private static EmojiSupportChecker instance;
 
     public static synchronized EmojiSupportChecker getInstance() {
         if (instance == null) {
@@ -88,7 +88,7 @@ public class EmojiRenderableChecker {
         return instance;
     }
 
-    private EmojiRenderableChecker() {
+    private EmojiSupportChecker() {
 
         mPaint = new TextPaint();
 
